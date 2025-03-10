@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Gino Mula -->
+    <title>Secret Message Form</title>
+    <style>
+        /*Basic page styling */
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        /*Input styling */
+        input {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        
+        /*Button styling */
+        button {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 5px 10px;
+        }
+        
+        /*Error display */
+        #validationError {
+            color: rgb(255, 0, 0);
+            margin-top: 10px;
+        }
+        
+        /*Secret message display */
+        #secretMessage {
+            background-color: rgb(7, 168, 7);
+            padding: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+    <!--Link to external JavaScript file-->
+    <script src="code.js" defer></script>
+</head>
+<body>
+    <!--Main heading for the page-->
+    <h1>Secret Message Form</h1>
+    
+    <!--Form that contains all user inputs-->
+    <form id="userForm">
+        <!--Label and input field for first name-->
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName"><br>
+        
+        <!--Label and input field for last name-->
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName"><br>
+        
+        <!--Label and input field for zip code-->
+        <label for="zipCode">Zip Code:</label><br>
+        <input type="text" id="zipCode"><br>
+        
+        <!--Submit button to process the form-->
+        <button type="submit">Show Secret Message</button>
+    </form>
+    
+    <!--Display validation errror messages and the secret message -->
+    <div id="validationError"></div>
+    <div id="secretMessage">
+    <!--The secret message content paragraph-->
+        <p id="messageContent"></p>
+    </div>
+</body>
+</html>
